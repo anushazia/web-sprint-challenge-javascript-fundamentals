@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-// My name is Anusha
+// Nested function can access the internal variable because the variable declared inside the function is part of the eclosed lexical environment. Functions look outward for context so anything inside the parent, the child variables can reach. Children inherit from the parent.
 
 
 
@@ -28,10 +28,15 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  number = [1, 2, 3, 4];
+  let total = 0;
+  for (let i = 0; i < number.length; i++) {
+    total += number[i];
   }
+  return total;
+  }
+  console.log(summation(4))
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
