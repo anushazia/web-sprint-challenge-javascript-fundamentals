@@ -60,8 +60,7 @@ const zooAnimals = [
   */
 
   function animalNames(zooAnimals){
-    const displayNames = animalArr => zooAnimals.map(animal => `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
-    
+    return zooAnimals.map((animal) => animal.animal_name, animal.scientific_name);    
 }
 
 
@@ -72,8 +71,7 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(zooAnimals){
-    const lowerCaseAnimals = zooAnimals.map(animal => animal.animal_name.toLowerCase());
-    return lowerCaseAnimals;
+    return zooAnimals.map((animal) => animal.animal_name.toLowerCase());
   }
   
   
@@ -82,8 +80,8 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(anArray){
+   return anArray.filter((animal) => animal.population < 5);
   }
   
 
@@ -93,9 +91,12 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function USApop(animalPopulation){
+    const popCounter = (total, population) => total + population;
+    const array = [];
+    animalPopulation.forEach((element) => array.push(element.population));
+    return array.reduce(popCounter);
+    }
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -106,22 +107,22 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    return cb(a, b);
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(a, b) {
+    return a + b
   }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(a, b){
+   return a * b;
   }
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
