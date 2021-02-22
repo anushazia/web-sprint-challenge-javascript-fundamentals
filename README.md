@@ -29,13 +29,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.forEach iterates over the array without pushing to a new array, where as .map copies and creates a new array.
+
 2. Explain the difference between a callback and a higher order function.
+
+callback function goes into a function, it is passed to a higher order function. higher order function is a function that takes another function as an argument.
 
 3. What is closure?
 
+Closure is calling of a function within its lexical environment
+
 4. Describe the four rules of the 'this' keyword.
+    a.Global Binding-this refers to the widnow/console
+    b.Implicit Binding-this refers to the object left of the .
+    c.Explicit Binding-this can be called explicitly by using .call .apply
+    d.New Binding-this in new binding refers to the specific instance of the object that is created in the constructor function
 
 5. Why do we need super() in an extended class?
+
+we need a super in extended class because it is used to access the superclass constructure and methods
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
